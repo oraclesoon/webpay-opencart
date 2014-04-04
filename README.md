@@ -1,7 +1,7 @@
-webpay-opencart
+Webpay-opencart
 ===============
 
-OpenCart Payment Gateway Extension for WebPay.
+OpenCart Payment Gateway Extension for _WebPay_.
 
 FAQ
 ===
