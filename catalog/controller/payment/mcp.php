@@ -17,11 +17,11 @@ class ControllerPaymentMCP extends Controller {
 
             $order_info = $this->model_checkout_order->getOrder($this->session->data['order_id']);
 
-            $amt = $this->currency->format($order_info['total'], "SGD", $order_info['currency_value'], false);
+            $amt = $this->currency->format($order_info['total'], $order_info['currency_value'], false);
 
             $ref = $dt->format('YmdHis');
 
-            $cur = "SGD";
+            $cur = $this->currency->getCode();
 
             $mid = $result['merchant_id'];
 
@@ -30,6 +30,7 @@ class ControllerPaymentMCP extends Controller {
             $fgkey = md5($linkBuf);
 
             
+        $this->data['cur'] = $cur; 
 
         $this->data['fgkey'] = $fgkey;
 
