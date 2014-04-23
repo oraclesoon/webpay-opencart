@@ -17,7 +17,9 @@ class ControllerPaymentMCP extends Controller {
 
             $order_info = $this->model_checkout_order->getOrder($this->session->data['order_id']);
 
-            $amt = $this->currency->format($order_info['total'], $order_info['currency_value'], false);
+            $amt_first = $this->currency->format($order_info['total'], $order_info['currency_value'], false);
+
+            $amt = preg_replace("/[^a-zA-Z0-9\/_|+ .-]/", '', $amt_first);
 
             $ref = $dt->format('YmdHis');
 
