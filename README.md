@@ -19,7 +19,9 @@ A:Make sure your config.php files is configured
 Q: I am having a mismatch error on payment process. Help!
 
 A: Make sure your merchant ID is associated with the currency you are trying to use.
-====================================================================
+
+
+
 Should you have any other question please raise issues in our github.
 https://github.com/mcpayment/webpay-opencart
 
